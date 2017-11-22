@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <vector>
 
 #include "RomanNumerator.hpp"
@@ -27,11 +26,11 @@ int main() {
 
     std::cout << "POSITIVE TESTS\n" << std::endl;
 
-    for (int i = 0; i < positiveTests.size(); ++i) {
+    for (const auto &positiveTest : positiveTests) {
         try {
-            std::cout << positiveTests[i]
+            std::cout << positiveTest
                       << " ~ "
-                      << romanNumerator.toArabic(positiveTests[i])
+                      << romanNumerator.toArabic(positiveTest)
                       << std::endl;
         } catch (const std::exception &e) {
             positiveErrors++;
@@ -40,11 +39,11 @@ int main() {
 
     std::cout << "\nNEGATIVE TESTS\n" << std::endl;
 
-    for (int i = 0; i < negativeTests.size(); ++i) {
+    for (const auto &negativeTest : negativeTests) {
         try {
-            std::cout << negativeTests[i]
-                      << " ~ "
-                      << romanNumerator.toArabic(negativeTests[i])
+            std::cout << negativeTest
+                    << " ~ "
+                      << romanNumerator.toArabic(negativeTest)
                       << std::endl;
         } catch (const std::exception &e) {
             negativeErrors++;

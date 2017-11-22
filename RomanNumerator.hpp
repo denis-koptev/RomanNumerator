@@ -24,7 +24,6 @@ private:
 
     int digitTemplate(char high, char med, char low);
 
-    int currentArabic;
     std::string currentRoman;
 
 };
